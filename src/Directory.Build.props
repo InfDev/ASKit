@@ -13,6 +13,7 @@
 	<Authors>Alexander Shlyakhto</Authors>
 	<Company>Alexander Shlyakhto - InfDev</Company>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
 	<PackageProjectUrl>https://github.com/InfDev/ASKit</PackageProjectUrl>
 	<RepositoryUrl>https://api.nuget.org/v3/index.json</RepositoryUrl>
