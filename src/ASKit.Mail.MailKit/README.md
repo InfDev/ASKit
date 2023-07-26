@@ -1,7 +1,5 @@
 # ASKit.Mail.MailKit
 
-![mail service](./assets/send-mail-service.png)
-
 ## About
 
 Implementation of a service for sending emails using the MailKit library.

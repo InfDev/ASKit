@@ -13,7 +13,7 @@
 	<PackageTags>askit, mail, service, mailkit, netcore, net, csharp, C#</PackageTags>
   </PropertyGroup>
 
-    <ItemGroup>
+	<ItemGroup>
 	    <PackageReference Include="MailKit" Version="4.1.0" />
 	    <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
 	    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
