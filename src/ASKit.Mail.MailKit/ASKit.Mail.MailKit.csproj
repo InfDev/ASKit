@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Settings">
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Details Package Information">
+	<Description>Implementing ASKit.Common.Mail.IMailService using MailKit</Description>
+	<Version>1.0.0</Version>
+	<License>MIT</License>
+	<PackageTags>skit, mail, mailkit, netcore, net, csharp, C#</PackageTags>
+  </PropertyGroup>
+
+    <ItemGroup>
+	    <PackageReference Include="MailKit" Version="4.1.0" />
+	    <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
+	    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
+    </ItemGroup>
+
+	<ItemGroup>
+		<Content Remove="Resources\**" />
+		<Compile Remove="Resources\**" />
+		<EmbeddedResource Remove="Resources\**" />
+		<None Remove="Resources\**" />
+	</ItemGroup>
+	
+    <ItemGroup>
+      <ProjectReference Include="..\ASKit.Common\ASKit.Common.csproj" />
+    </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+<Project>
+  <Target Name="CopyPackagesAfterBuild" AfterTargets="Pack">
+	<ItemGroup>
+		<PackageFiles Include="$(TargetDir)/../$(ProjectName).?.?.?.nupkg" />
+		<PackageFiles Include="$(TargetDir)/../$(ProjectName).?.?.?.snupkg" />
+	</ItemGroup>
+	  <Message Text="Copying packages: @(PackageFiles)" Importance="high"></Message>
+	  <Message Text="To: $(SolutionDir)packages\" Importance="high"></Message>
+	  <Copy SourceFiles="@(PackageFiles)" DestinationFolder="$(SolutionDir)packages\" />
+  </Target>										
+</Project>

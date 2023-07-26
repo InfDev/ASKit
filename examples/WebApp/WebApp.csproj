@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>20b43ca5-6b43-4ddd-8f37-a54e9db2cd4b</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\ASKit.Mail.MailKit\ASKit.Mail.MailKit.csproj" />
+  </ItemGroup>
+
+</Project>
