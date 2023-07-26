@@ -10,7 +10,7 @@
 	<Description>Implementing ASKit.Common.Mail.IMailService using MailKit</Description>
 	<Version>1.0.0</Version>
 	<License>MIT</License>
-	<PackageTags>skit, mail, mailkit, netcore, net, csharp, C#</PackageTags>
+	<PackageTags>askit, mail, service, mailkit, netcore, net, csharp, C#</PackageTags>
   </PropertyGroup>
 
     <ItemGroup>
