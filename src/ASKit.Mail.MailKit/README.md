@@ -23,16 +23,15 @@ Defining messages limited to types:
 ```csharp
 namespace ASKit.Common.Mail;
 
-// Simple Mail message
-public record SkMailMessage(string To, string Subject, string Content);
-
-// Mail message with attachments
-public record SkMailMessageWithFiles(string To, string Subject, string Content,
-    IEnumerable<string> Attachments) : SkMailMessage(To, Subject, Content);
-
-// Mail message with attachments
-public record SkMailMessageWithFormFiles(string To, string Subject, string Content,
-    IFormFileCollection Attachments) : SkMailMessage(To, Subject, Content);
+public record SkMailMessage(string To, string Subject, string Content,
+                        IEnumerable<SkAttachment>? Attachments = null);
+/// <summary>
+/// Attachment to email message
+/// </summary>
+/// <param name="ContentId">File name or file path if Bytes is not specified</param>
+/// <param name="ContentType">Mime type, if not specified then "application/octet-stream"</param>
+/// <param name="Bytes">Content</param>
+public record SkAttachment(string ContentId, string? ContentType = null, byte[]? Bytes = null);
 ```
 
 Message includes multiple addresses in the destination fields (To, CC, BCC, ReplyTo) and also uses several
@@ -45,6 +44,13 @@ Mailbox examples:
 - `"Admin Alex" <admin@domen>`, `supervisor@domen`
 
 **Attention! Mailboxes are separated by `,` or `;`, so these characters should not be included in the Name part of the mailbox (in quotes).**
+
+ContentType from [list of known mime-types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types). 
+You can use the **System.Net.Mime** namespace:
+
+```csharp
+var contentType = (new ContentType { MediaType = MediaTypeNames.Application.Pdf }).ToString();
+```
 
 ## Configuration
 
