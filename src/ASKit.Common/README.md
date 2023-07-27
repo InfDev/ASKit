@@ -15,7 +15,7 @@ var content = "Hello world";
 (var shell, var shellKey) = OsHelper.DefaultShell();
 var cli = new CliBaseService(shell);
 var processResult = await cli.ExecuteCommand($"{shellKey} echo {content}");
-// or (type other than **string** can be used if the CLI tool returns JSON data)
+// or (type other than string can be used if the CLI tool returns JSON data)
 var processResult2 = await cli.ExecuteCommand<string>(
 					new KvArg[] { new KvArg(shellKey, $"echo {content}") });
 Assert.Equal(content, processResult.Result);
