@@ -2,6 +2,9 @@
 
 ASKit library set.
 
+Packages published to [NuGet Gallery](https://www.nuget.org/packages?q=ASKit).
+
+
 ## ASKit.Common
 
 [ASKit.Common](./src/ASKit.Common/README.md) - common definitions, services, extensions and helpers.
